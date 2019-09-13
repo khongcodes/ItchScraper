@@ -1,6 +1,7 @@
 # ItchScraper
 
 Welcome to ItchScraper, a gem that uses scraping to display basic navigable menus and projects of itch.io.
+
 (What is itch.io? see: https://itch.io/docs/general/about)
 
 The categories of projects that can be viewed are:
