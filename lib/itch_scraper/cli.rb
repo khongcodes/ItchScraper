@@ -58,7 +58,7 @@ class CLI
    end
 
    def welcome
-      puts "Welcome to ItchScraperTest!"
+      puts "Welcome to ItchScraper!"
    end
 
    #menu control
