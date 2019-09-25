@@ -56,7 +56,6 @@ The following commands are available based on context (instructions will be prin
 - 'v' to view previously-viewed items
 - 'r' to access the root menu
 
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

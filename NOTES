@@ -1,0 +1,11 @@
+To do list
+
+- OVERHAUL 'b' BACK MECHANIC AS A MEMORY MECHANISM, 'LAST-VISITED'
+   > visualize someone following behind you as you walk from room to room, writing down the last room you were in on a whiteboard
+   > should be relatively easy since we already have an array of menu names:
+   > [0,1,2,1] for Root, Games, New&Popular, page-index
+   > essentially the index or index-1 of menu name array
+   > lvl2_nav is just this nav_memory_array[2]
+   > and a new separate variable - last_nest_nav?
+   > last_nest_nav=2, use nav_memory_array[last_nest_nav] to build menu
+   > INITIALIZE at [0,0,0,0] last_nest_nav=0 

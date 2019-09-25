@@ -1,7 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-
 include MenuModule
 
 class ItchObj
@@ -22,7 +18,7 @@ class ItchObj
    
    #basic info is stored
    def obj_basic
-      puts "#{title} #{price}"
+      puts "#{title}".colorize(:yellow) + " #{price}"
       puts "by #{author}"
       puts short_text
       puts platforms
@@ -37,28 +33,7 @@ class ItchObj
    def obj_detail
       puts url
       puts "\n"
-      textparse
-   end
-
-   #detailed info is not stored
-   def textparse
-      doc=Nokogiri::HTML(open(@url))
-      #binding.pry
-      doc.css("div.formatted_description.user_formatted *").each do |a|
-         parsing(a)
-      end
-   end
-   
-   def parsing(a)
-      if ["h1","h2","h3","h4","h5"].include?(a.name)
-         puts "\n#{a.text}"
-      elsif a.name=="li"
-         puts "> #{a.text}"
-      elsif a.name=="br"
-         puts ""
-      else
-         puts a.text.lstrip unless ["strong","em","a","ul","img","figure"].include?(a.name)
-      end
+      Scraper.textparse(@url)
    end
 
    #access @@all to see previously-viewed items
