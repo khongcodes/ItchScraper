@@ -97,11 +97,11 @@ class Scraper
       if ["h1","h2","h3","h4","h5"].include?(a.name)
          puts "\n#{a.text}"
       elsif a.name=="li"
-         puts "> #{a.text}".colorize(:light_green)
+         puts "> #{a.text}".colorize(:cyan)
       elsif a.name=="br"
          puts ""
       else
-         puts a.text.lstrip.colorize(:light_green) unless ["strong","em","a","ul","img","figure"].include?(a.name)
+         puts a.text.lstrip.colorize(:cyan) unless ["strong","em","a","ul","img","figure"].include?(a.name)
       end
    end
 
